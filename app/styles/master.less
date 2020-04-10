@@ -1,0 +1,148 @@
+@import './vendor/reset.less';
+@import './themes/dark.less';
+@import './fonts/css/all.css';
+
+html, body, .main-container, #root {
+    height: 100%;
+    background-color:  @vui-secondary-dark;
+    color: @vui-secondary-lighter;
+    font-family: @vui-font-family;
+}
+
+button {
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    &:focus, &:hover {
+        outline: none;
+    }
+}
+// body {
+//     background-color:  @vui-secondary-dark;
+// }
+.main-container {
+    position: relative;
+}
+
+.main-logo {
+    position: relative;
+    font-size: 40px;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    .main-logo-btn {
+            display: block;
+            color: @vui-primary-lighter;
+            height: 100%;
+            line-height: 50px;
+    }
+}
+
+
+.top-header-toolbar {
+    height: 50px;
+    width: calc(100% - 74px);
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 63px;
+    background-color:  @vui-secondary;
+    border: @vui-secondary-light solid 1px;
+    border-top: 0;
+    box-shadow: 1px 0px 2px @vui-secondary-darkest;
+    border-radius: 0 0 20px 20px;
+}
+
+.left-header-toolbar {
+    height: 100%;
+    width: 50px;
+    box-sizing: border-box;
+    background-color:  @vui-secondary;
+    border-right: @vui-secondary-light solid 1px;
+    box-shadow: 1px 0px 2px @vui-secondary-darker;
+}
+
+.action-btn-group {
+    display: block;
+    width: 30%;
+    text-align: center;
+    &.push-right {
+        float: right ;
+    }
+}
+
+.action-btn-primary {
+    display: inline-block;
+    padding: 5px;
+    border-radius: 2px;
+    .action-btn-link {
+    border: 0;
+    background-color: @vui-primary;
+    color: @white;
+    border-radius: 2px;
+    box-shadow: 1px 0px 2px @vui-secondary-darker;
+    font-size: 14px; 
+    &.m-size {
+        width: 90px;
+        height: 30px;
+    }
+    &.btn-active,
+        &:hover {
+            background-color: @vui-primary-lighter;
+            color: @white;
+
+        }
+    }
+}
+
+.action-btn-secondary {
+    display: inline-block;
+    padding: 5px;
+    border-radius: 2px;
+    .action-btn-link {
+    border: 0;
+    background-color: @vui-secondary-light;
+    color: @white;
+    opacity: .7;
+    border-radius: 2px;
+    box-shadow: 1px 0px 2px @vui-secondary-darkest;
+    font-size: 14px; 
+    &.m-size {
+        width: 90px;
+        height: 30px;
+    }
+    &.btn-active,
+        &:hover {
+            background-color: @vui-secondary-lighter;
+            color: @white;
+            opacity: 1;
+        }
+    }
+}
+
+.action-btn-group {
+    display: block;
+}
+
+.action-btn {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    // border-top: @vui-secondary-darker solid 1px;
+    // border-bottom: @vui-secondary-light solid 1px;
+    text-align: center;
+    a.action-btn-link {
+        display: inline-block;
+        color: @white;
+        width: 100%;
+        height: 100%;
+        font-size: 18px;
+        &.btn-active,
+        &:hover {
+            background-color: @vui-primary;
+            color: @white;
+            border-radius: 2px;
+        }
+    }
+}
