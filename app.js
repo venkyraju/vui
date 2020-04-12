@@ -7,7 +7,7 @@ import App from "./app/containers/app";
 import reducer from './app/containers/app/reducer';
 
 // styles
-import './app/styles/master.less';
+import './app/styles/index.less';
 
 const store =  createStore(reducer);
 
