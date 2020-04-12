@@ -1,0 +1,28 @@
+
+@B_x: 2px; // default box-shadow x 
+@B_y: 2px; // default box-shadow y
+@B_blur: 1px; // default box-shadow blur 
+@B_shadowColor:  @vui-primary-shadow-color; // default box-shadow color 
+
+.vui-box-shadow(@x: @B_x, @y: @B_y, @blur: @B_blur, @shadowColor: @B_shadowColor) {
+    & when(iscolor(@x)) {
+        box-shadow: @B_x @B_y @B_blur @x;
+    }
+    & when(ispixel(@x)) {
+        box-shadow: @x @y @blur @shadowColor;
+    }
+}
+
+@T_x: 2px; // default text-shadow x 
+@T_y: 2px; // default text-shadow y
+@T_blur: 1px; // default text-shadow blur 
+@T_shadowColor:  @vui-primary-shadow-color; // default text-shadow color 
+
+.vui-text-shadow(@x: @T_x, @y: @T_y, @blur: @T_blur, @shadowColor: @T_shadowColor) {
+    & when(iscolor(@x)) {
+        text-shadow: @B_x @B_y @B_blur @x;
+    }
+    & when(ispixel(@x)) {
+        text-shadow: @x @y @blur @shadowColor;
+    }
+}

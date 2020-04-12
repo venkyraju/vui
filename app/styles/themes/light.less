@@ -2,12 +2,13 @@
 //
 //## Gray and brand colors for use across Bootstrap.
 @white:                  #FFF;
-@black:                  #000;   
+@black:                  #000;
 
-@vui-primary:#04BF7B;
-@vui-secondary:#484759;
+
+@vui-primary:rgb(0, 218, 134);  
 // @vui-primary:rgb(4, 101, 191);
-// @vui-secondary:#373841;
+// @vui-secondary:#484759;
+@vui-secondary:#ffffff;
 
 @vui-font-family: 'helvetica';
 
@@ -16,16 +17,16 @@
 @vui-primary-darkest : darken(@vui-primary, 12%);
 
 @vui-primary-light:  lighten(@vui-primary, 9%);
-@vui-primary-lighter : lighten(@vui-primary, 18%); // primary hover
+@vui-primary-lighter : darken(@vui-primary, 20%);; // primary hover
 @vui-primary-lightest : lighten(@vui-primary, 27%);
 
-@vui-secondary-dark: darken(@vui-secondary, 3%);
-@vui-secondary-darker: darken(@vui-secondary, 6%);
-@vui-secondary-darkest: darken(@vui-secondary, 12%);
+@vui-secondary-dark: darken(@vui-secondary, 10%); // page bg color
+@vui-secondary-darker: darken(@vui-secondary, 15%); // page shadow
+@vui-secondary-darkest: darken(@vui-secondary, 50%);
 
-@vui-secondary-light: lighten(@vui-secondary, 9%); // inactive color 
-@vui-secondary-lighter: lighten(@vui-secondary, 18%); // secondary-hover
-@vui-secondary-lightest: lighten(@vui-secondary, 27%);
+@vui-secondary-light: lighten(@vui-secondary, 5%); // border color , // inactive color 
+@vui-secondary-lighter: lighten(@vui-secondary, 10%); // page font color //  secondary-hover
+@vui-secondary-lightest: lighten(@vui-secondary, 20%);
 
 @vui-primary-white:   #d5d5d5;
 @vui-secondary-white:  @white ;
@@ -34,10 +35,10 @@
 @vui-primary-bg-color: @vui-secondary-dark;
 @vui-secondary-bg-color: @vui-secondary;
 
-@vui-primary-font-color: @white;
-@vui-secondary-font-color: @vui-secondary-light;
+@vui-primary-font-color: @vui-secondary-darkest;
+@vui-secondary-font-color: @vui-secondary-darkest;
 
-@vui-primary-border-color: @vui-secondary-light;
+@vui-primary-border-color: @vui-secondary-dark;
 @vui-secondary-border-color: @vui-secondary-light;
 
 @vui-primary-shadow-color: @vui-secondary-darker;
@@ -45,8 +46,6 @@
 
 // @vui-primary-hover-color:
 // @vui-secondary-hover-color:
-
-
 
 // color: #d5d5d5;
 // font-size: 22px;
