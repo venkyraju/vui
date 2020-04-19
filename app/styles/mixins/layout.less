@@ -1,0 +1,8 @@
+.grid(@name; @columns; @index: 1) when (@index =< @columns) {
+    .grid(@name; @columns; (@index + 1));
+    .@{name}-@{index} {
+      width: ( percentage(@index / @columns) );
+    }  
+  }
+
+  .grid(grid-col, 12);
