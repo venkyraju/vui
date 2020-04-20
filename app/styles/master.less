@@ -16,8 +16,6 @@ button {
     }
 }
 
-
-
 .main-logo {
     font-size: 40px;
     text-align: center;
@@ -31,11 +29,9 @@ button {
 .top-header-toolbar {
     .vui-box-shadow();
     height: 50px;
-    width: calc(100% - 74px);
+    width: 100%;
     box-sizing: border-box;
-    position: absolute;
-    top: 0;
-    left: 63px;
+    position: relative;
     background-color:  @vui-secondary-bg-color;
     border: @vui-primary-border-color solid 1px;
     border-top: 0;
@@ -50,73 +46,3 @@ button {
     // box-shadow: 2px 2px 1px @vui-primary-shadow-color;
 
 }
-
-.vui-toolbar-btn {
-    // border-top: @vui-secondary-darker solid 1px;
-    // border-bottom: @vui-secondary-light solid 1px;
-    text-align: center;
-    .action-btn {
-        background: none;
-        color: @vui-primary-font-color;
-        font-size: 18px;
-        padding: 0;
-        .vui-text-shadow(2px, 2px, 1px, @vui-primary-shadow-color);
-        &.btn-active,
-        &:hover {
-            background-color: @vui-primary;
-            color: @white;
-            border-radius: 2px;
-            text-shadow: none;
-        }
-    }
-}
-
-
-.vui-btn-primary {
-    padding: 5px;
-    border-radius: 2px;
-    .action-btn {
-        border: 0;
-        background-color: @vui-primary;
-        color: @white;
-        border-radius: 2px;
-        .vui-box-shadow(2px, 2px, 1px, @vui-primary-shadow-color);
-        font-size: 14px; 
-        &.m-size {
-            width: 90px;
-            height: 30px;
-        }
-        &.btn-active,
-            &:hover {
-                background-color: @vui-primary-lighter;
-                color: @white;
-            }
-    }
-}
-
-.vui-btn-secondary {
-    display: inline-block;
-    padding: 5px;
-    border-radius: 2px;
-    .action-btn {
-        border: 0;
-        background-color: @vui-secondary-darker;
-        color: @white;
-        opacity: .7;
-        border-radius: 2px;
-        .vui-box-shadow();
-        font-size: 14px; 
-        &.m-size {
-            width: 90px;
-            height: 30px;
-        }
-        &.btn-active,
-            &:hover {
-                background-color: @vui-secondary-darkest;
-                color: @white;
-                opacity: 1;
-                
-            }
-    }
-}
-
