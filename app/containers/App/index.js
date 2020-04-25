@@ -5,6 +5,9 @@ import { connect } from "react-redux";
 import SampleForm from '../../components/SampleForm';
 import Grid from '../../components/Grid';
 
+import Card from '../../components/Card';
+import Tabs from '../../components/Tabs';
+
 import {addName} from './actions';
 
 
@@ -70,8 +73,16 @@ class App extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className='left-container'></div>
-                    <div className='right-container'></div>
+                    <div className='row-container'>
+                        <div className='left-container'>
+                            <Card>
+                                
+                            </Card>
+                        </div>
+                        <div className='right-container'>
+                            <Tabs/>
+                        </div>
+                    </div>
                 </div>
             </div>)
 }
