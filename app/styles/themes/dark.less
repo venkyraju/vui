@@ -4,7 +4,7 @@
 @white:                  #FFF;
 @black:                  #000;   
 
-@vui-primary:#04BF7B;
+@vui-primary:rgb(191, 4, 144);
 @vui-secondary:#484759;
 // @vui-primary:rgb(4, 101, 191);
 // @vui-secondary:#373841;
@@ -23,9 +23,9 @@
 @vui-secondary-darker: darken(@vui-secondary, 6%);
 @vui-secondary-darkest: darken(@vui-secondary, 12%);
 
-@vui-secondary-light: lighten(@vui-secondary, 9%); // inactive color 
-@vui-secondary-lighter: lighten(@vui-secondary, 18%); // secondary-hover
-@vui-secondary-lightest: lighten(@vui-secondary, 27%);
+@vui-secondary-light: lighten(@vui-secondary, 10%); // inactive color 
+@vui-secondary-lighter: lighten(@vui-secondary, 25%); // secondary-hover
+@vui-secondary-lightest: lighten(@vui-secondary, 60%);
 
 @vui-primary-white:   #d5d5d5;
 @vui-secondary-white:  @white ;
@@ -34,8 +34,10 @@
 @vui-primary-bg-color: @vui-secondary-dark;
 @vui-secondary-bg-color: @vui-secondary;
 
+
 @vui-primary-font-color: @white;
-@vui-secondary-font-color: @vui-secondary-light;
+@vui-secondary-font-color: @vui-secondary-lightest;
+@vui-font-light-color: @vui-secondary-lighter;
 
 @vui-primary-border-color: @vui-secondary-light;
 @vui-secondary-border-color: @vui-secondary-light;

@@ -8,7 +8,8 @@
     &__tab-list {
       // border-bottom: 1px solid #aaa;
       // margin: 0 0 10px;
-      padding: 0;
+      padding: 0 8px;
+      .vui-box-shadow();
     }
   
     &__tab {
@@ -23,17 +24,49 @@
       height: 30px;
       width: 90px;
       line-height: 30px;
-      padding: 0 6px;
+      padding: 0 0 0 6px;
       box-sizing: border-box;
       text-align: center;
+      color: @vui-font-light-color;
+      position: relative;
       h4 {
-        width: calc(100% - 20px);
-        display: inline-block;
+        // width: 100%; // calc(100% - 20px);
+        display: block;
+        padding-right: 20px;
+        // vertical-align: baseline;
+        // &:before {
+        //   content: "";
+        //   display: block;
+        //   height: 20px;
+        //   width: 20px;
+        //   vertical-align: baseline;
+        //   position: absolute;
+        //   top: 4px;
+        //   border-left: 1px solid #ccc;
+        // }
       }
-      i {
-        display: inline-block;
-        line-height: 30px;
+      .action-btn {
+        display: block;
+        background: transparent;
+        position: absolute;
+        right: 4px;
+        top: 6px;
+        height: 18px;
+        width: 18px;
+        border-radius: 50%;
+        line-height: 18px;
         font-size: 12px;
+        cursor: pointer;
+        &:hover {
+          background: @vui-primary-light;
+          opacity: .9;
+          //color: @vui-primary-font-color;
+        }
+         i {
+            line-height: inherit;
+            display: inline-block;
+            vertical-align: middle;
+         }
       }
   
       &--selected {
@@ -41,13 +74,18 @@
         // border-color: #aaa;
         // color: inherit;
         border-radius: 8px 8px 0 0;
-        background: #3a3948;
-        border-color: #615e5e;
-        color: #24faad;
+        background: @vui-secondary-darker;
+        border-color: @vui-primary-border-color;
+        color: @vui-secondary-font-color;
+          h4 {
+            &:before {
+              display: none;
+            }
+          }
       }
   
       &--disabled {
-        color: GrayText;
+        color: @vui-font-light-color;
         cursor: default;
       }
   
@@ -74,12 +112,12 @@
     &__tab-panel {
       display: none;
       flex: 100 25px;
-        box-shadow: 2px 2px 1px #3a3948;
-        background-color: #3a3948;
-        border: #5d5b73 solid 1px;
-        border-radius: 0 8px 8px 8px;
-        overflow: hidden;
-    padding: 8px;
+        .vui-box-shadow();
+        background-color: transparent;
+        border-top: @vui-primary-border-color solid 1px;
+        border-radius: 0 ;
+        overflow: visible;
+    padding: 0;
     flex-wrap: wrap;
     justify-content: space-between;
   
@@ -91,10 +129,15 @@
 
   .card-widget {
       width: 50%;
-      padding: 8px;
+      padding: 8px 8px 0 8px;
       box-sizing: border-box;
-      overflow: hidden;
       display: flex;
+      &.full-col-with {
+        // padding-right: 0;
+      }
+      &:last-child {
+        // padding-right: 0;
+      }
       .card-container{
         border: @vui-primary-border-color solid 1px;
         border-radius: 8px;
