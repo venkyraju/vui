@@ -5,8 +5,10 @@
   "main": "app.js",
   "scripts": {
     "start": "webpack-dev-server --open --hot --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "deploy": "gh-pages -d build"
   },
+  "homepage": "https://venkyraju.github.io/vui/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/venkyraju/vui.git"
@@ -16,7 +18,6 @@
   "bugs": {
     "url": "https://github.com/venkyraju/vui/issues"
   },
-  "homepage": "https://github.com/venkyraju/vui#readme",
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
