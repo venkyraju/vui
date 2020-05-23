@@ -1,0 +1,150 @@
+.react-tabs {
+    -webkit-tap-highlight-color: transparent;
+    width: 100%;
+    padding-left: 8px;
+    display: flex;
+    flex-direction: column;
+  
+    &__tab-list {
+      // border-bottom: 1px solid #aaa;
+      // margin: 0 0 10px;
+      padding: 0 8px;
+      .vui-box-shadow();
+    }
+  
+    &__tab {
+      display: inline-block;
+      border: 1px solid transparent;
+      border-bottom: none;
+      bottom: -1px;
+      position: relative;
+      list-style: none;
+      padding: 6px 12px;
+      cursor: pointer;
+      height: 30px;
+      width: 90px;
+      line-height: 30px;
+      padding: 0 0 0 6px;
+      box-sizing: border-box;
+      text-align: center;
+      color: @vui-font-light-color;
+      position: relative;
+      h4 {
+        // width: 100%; // calc(100% - 20px);
+        display: block;
+        padding-right: 20px;
+        // vertical-align: baseline;
+        // &:before {
+        //   content: "";
+        //   display: block;
+        //   height: 20px;
+        //   width: 20px;
+        //   vertical-align: baseline;
+        //   position: absolute;
+        //   top: 4px;
+        //   border-left: 1px solid #ccc;
+        // }
+      }
+      .action-btn {
+        display: block;
+        background: transparent;
+        position: absolute;
+        right: 4px;
+        top: 6px;
+        height: 18px;
+        width: 18px;
+        border-radius: 50%;
+        line-height: 18px;
+        font-size: 12px;
+        cursor: pointer;
+        &:hover {
+          background: @vui-primary-light;
+          opacity: .9;
+          //color: @vui-primary-font-color;
+        }
+         i {
+            line-height: inherit;
+            display: inline-block;
+            vertical-align: middle;
+         }
+      }
+  
+      &--selected {
+        // background: none;
+        // border-color: #aaa;
+        // color: inherit;
+        border-radius: 8px 8px 0 0;
+        background: @vui-secondary-darker;
+        border-color: @vui-primary-border-color;
+        color: @vui-secondary-font-color;
+          h4 {
+            &:before {
+              display: none;
+            }
+          }
+      }
+  
+      &--disabled {
+        color: @vui-font-light-color;
+        cursor: default;
+      }
+  
+      &:focus {
+        // box-shadow: 0 0 5px hsl(208, 99%, 50%);
+        // border-color: hsl(208, 99%, 50%);
+        outline: none;
+  
+        &:after {
+          content: "";
+          position: absolute;
+          height: 5px;
+          left: -4px;
+          right: -4px;
+          bottom: -5px;
+          // background: #fff;
+        }
+      }
+    }
+    .tab-panel-warper{
+        display: flex;
+        flex: 100 30;
+    }
+    &__tab-panel {
+      display: none;
+      flex: 100 25px;
+        .vui-box-shadow();
+        background-color: transparent;
+        border-top: @vui-primary-border-color solid 1px;
+        border-radius: 0 ;
+        overflow: visible;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  
+      &--selected {
+        display: flex;
+      }
+    }
+  }
+
+  .card-widget {
+      width: 50%;
+      padding: 8px 8px 0 8px;
+      box-sizing: border-box;
+      display: flex;
+      &.full-col-with {
+        // padding-right: 0;
+      }
+      &:last-child {
+        // padding-right: 0;
+      }
+      .card-container{
+        border: @vui-primary-border-color solid 1px;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+  }
+  .full-col-with {
+      width: 100%;
+  }
+  

@@ -1,0 +1,35 @@
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.card-header {
+    height: 30px;
+    text-align: center;
+    background: @vui-secondary-darker;
+    border-bottom: @vui-primary-border-color solid 1px;
+    box-sizing: border-box;
+}
+
+.card-header-title {
+    text-align: left;
+    line-height: 30px;
+    padding: 0 0 0 8px;
+    font-size: 14px;
+    /* font-weight: bold; */
+    color:  @vui-secondary-font-color;
+    /* padding-top: 2px; */
+    width: calc(100% - 35px);
+}
+
+.card-section {
+    flex: 100 35;
+}
+
+.card-widget{
+    .card-container {
+        background-color:  @vui-secondary-bg-color;
+        .vui-box-shadow();
+    }
+}
